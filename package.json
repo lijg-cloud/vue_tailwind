@@ -1,0 +1,45 @@
+{
+  "name": "vue_tailwind",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "CONFIG_ENV=dev vite",
+    "build": "CONFIG_ENV=production vue-tsc --noEmit && vite build",
+    "server": "ts-node-dev --project server/tsconfig.json ./server/development/app.ts",
+    "start": "tsc --project server/tsconfig.json && pm2 start pm2.json --env production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.1",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0",
+    "koa-static": "^5.0.0",
+    "node-fetch": "^3.2.4",
+    "ts-node-dev": "^1.1.8",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/koa-mount": "^4.0.1",
+    "@types/koa-router": "^7.4.4",
+    "@types/koa-session": "^5.10.6",
+    "@types/koa-static": "^4.0.2",
+    "@types/node": "^17.0.31",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.7",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.5",
+    "vue-tsc": "^0.34.7"
+  }
+}
